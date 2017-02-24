@@ -18,10 +18,10 @@ Artifact_Weapon_Plus_one={
     
     --A,  {AF+1 ID, Relic_Armor ID    , Relic_Armor_-1 ID, Crafted_Item ID, Currency ID, curencynNbr}
     111    ,{    xxxxx    ,    16764    ,    16755    ,    16501    ,    1126    ,    10    },--THF lv 50
-    112    ,{    yyyyy    ,    xxxxx    ,        ,    17612    ,    1126    ,    20    },--THF lv 60
-    113    ,{    zzzzz    ,    yyyyy    ,    17980    ,        ,    1126    ,    30    },--THF lv 70
-    114    ,{    aaaaa    ,    zzzzz    ,        ,        ,    1126    ,    40    },--THF lv 75
-    115    ,{    aaaaa    ,    zzzzz    ,        ,        ,    1127    ,    30    },--THF lv 75
+    112    ,{    yyyyy    ,    xxxxx    ,     1293    ,    17612    ,    1126    ,    20    },--THF lv 60
+    113    ,{    zzzzz    ,    yyyyy    ,    17980    ,    16469    ,    1126    ,    30    },--THF lv 70
+    114    ,{    aaaaa    ,    zzzzz    ,    17982    ,    17601    ,    1126    ,    40    },--THF lv 75
+    115    ,{    18996    ,    aaaaa    ,    16480    ,     1298    ,    1127    ,    30    },--THF lv 75
     };
 
     
