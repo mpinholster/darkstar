@@ -78,11 +78,20 @@ function ShowOPVendorShop(player)
 
     stock = 
     {
-        0x1034,316,        --Antidote
-        0x1037,800,        --Echo Drops
-        0x1020,4832,    --Ether
-        0x1036,2595,    --Eye Drops
-        0x1010,910        --Potion
+        0x1034,316,    --Antidote
+        0x1037,800,    --Echo Drops
+        0x1020,4832,   --Ether
+        0x1036,2595,   --Eye Drops
+        0x1010,910,    --Potion
+        0x1008,10000,  --Fire Cluster
+        0x1009,10000,  --Ice Cluster
+        0x100A,10000,  --Wind Cluster
+        0x100B,10000,  --Earth Cluster
+        0x100C,10000,  --Lightning Cluster
+        0x100D,10000,  --Water Cluster
+        0x100E,10000,  --Light Cluster
+        0x100F,10000,  --Dark Cluster
+        0x3D93,10000,  --Emperor Band
     };
 
     showShop(player, STATIC, stock);

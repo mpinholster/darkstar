@@ -80,7 +80,7 @@ homepoints[69]  = { 3,  6,    -293,    -10,    -102,   0,  87,  500}; -- Bastok 
 homepoints[70]  = { 3,  7,     -32,     -5,     131,   0,  94,  500}; -- Windurst Waters [S] #1    
 homepoints[71]  = { 3,  8,    -365, -176.5,     -36,   0, 158, 1000}; -- Upper Delkfutt's Tower #1 
 homepoints[72]  = { 3,  9,     -13,     48,      61,   0, 178, 1000}; -- The Shrine of Ru'Avitau #1
-homepoints[73]  = { 3, 10,       0,      0,       0,   0,  29, 1000}; -- Riverne - Site #B01 #1    
+homepoints[73]  = { 3, 10,    -520,    -18,     505, 127,  29, 1000}; -- Riverne - Site #B01 #1    
 homepoints[74]  = { 3, 11,     -98,    -10,    -493, 192,  52, 1000}; -- Bhaflau Thickets #1       
 homepoints[75]  = { 3, 12,    -449,     13,    -497,   0,  79, 1000}; -- Caedarva Mire #1          
 homepoints[76]  = { 3, 13,      64,   -196,     181,   0,   5, 1000}; -- Uleguerand Range #1       
@@ -97,7 +97,7 @@ homepoints[86]  = { 3, 23,    -532,      0,     447, 128,  33, 1000}; -- Al'Taie
 homepoints[87]  = { 3, 24,     569,      0,     410, 192,  33, 1000}; -- Al'Taieu #3               
 homepoints[88]  = { 3, 25,     -12,      0,    -288, 192,  34, 1000}; -- Grand Palace of Hu'Xzoi #1
 homepoints[89]  = { 3, 26,    -426,      0,     368, 224,  35, 1000}; -- The Garden of Ru'Hmet #1  
-homepoints[90]  = { 3, 27,       -540.844,      -4.000,       70.809,   74,  61, 1000}; -- Mount Zhayolm #1  // No valid location
+homepoints[90]  = { 3, 27, -540.844,-4.000,  70.809,  74,  61, 1000}; -- Mount Zhayolm #1  // No valid location
 homepoints[91]  = { 3, 28,    -303,     -8,     526,   0, 113, 1000}; -- Cape Terrigan #1          
 homepoints[92]  = { 3, 29,      88,    -15,    -217,   0, 153, 1000}; -- The Boyahda Tree #1       
 homepoints[93]  = { 3, 30,     182,     34,     -62, 223, 160, 1000}; -- Den of Rancor #2
@@ -128,7 +128,7 @@ homepoints[117] = { 4, 22,     -65,  -17.5,     563, 224,  25, 1000}; -- Misarea
 homepoints[118] = { 4, 23,     -92,     -2,      54, 155, 238,  500}; -- Windurst Waters #4
 homepoints[119] = { 4, 24,   -43.5,      0,    -145,   0, 241,  500}; -- Windurst Woods #5
 homepoints[120] = { 4, 25,      14,  -9.96,      -5,   0,  26,  500}; -- Tavnazian Safehold #2
-homepoints[121] = { 4, 26,   73.59,  -36.149,  38.87,   0,  26,  500}; -- Tavnazian Safehold #3
+homepoints[121] = { 4, 26,   73.59, -36.149,  38.87,   0,  26,  500}; -- Tavnazian Safehold #3
 
 
 

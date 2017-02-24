@@ -16,9 +16,9 @@ skeletonKey = 0x45B; -- 1115
   livingKey = 0x3FF; -- 1023
    thftools = 0x3FE; -- 1022
 
-   SK_SUCCESS_INCREMENT = 0.2
-   LK_SUCCESS_INCREMENT = 0.15
-  TTK_SUCCESS_INCREMENT = 0.1
+   SK_SUCCESS_INCREMENT = 0.75   -- default 0.2
+   LK_SUCCESS_INCREMENT = 0.50  -- default 0.15
+  TTK_SUCCESS_INCREMENT = 0.25   -- default 0.1
 
 ---------------------------------------
 -- Spawn Mimic

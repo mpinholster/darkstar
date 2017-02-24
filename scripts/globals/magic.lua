@@ -4,61 +4,61 @@ require("scripts/globals/weather");
 require("scripts/globals/utils");
 require("scripts/globals/settings");
 
-    MMSG_BUFF_FAIL = 75;
+MMSG_BUFF_FAIL = 75;
 
-    DIVINE_MAGIC_SKILL     = 32;
-    HEALING_MAGIC_SKILL    = 33;
-    ENHANCING_MAGIC_SKILL  = 34;
-    ENFEEBLING_MAGIC_SKILL = 35;
-    ELEMENTAL_MAGIC_SKILL  = 36;
-    DARK_MAGIC_SKILL       = 37;
-    NINJUTSU_SKILL         = 39;
-    SUMMONING_SKILL        = 38;
-    SINGING_SKILL          = 40;
-    STRING_SKILL           = 41;
-    WIND_SKILL             = 42;
-    BLUE_SKILL             = 43;
+DIVINE_MAGIC_SKILL     = 32;
+HEALING_MAGIC_SKILL    = 33;
+ENHANCING_MAGIC_SKILL  = 34;
+ENFEEBLING_MAGIC_SKILL = 35;
+ELEMENTAL_MAGIC_SKILL  = 36;
+DARK_MAGIC_SKILL       = 37;
+NINJUTSU_SKILL         = 39;
+SUMMONING_SKILL        = 38;
+SINGING_SKILL          = 40;
+STRING_SKILL           = 41;
+WIND_SKILL             = 42;
+BLUE_SKILL             = 43;
 
-    FIRESDAY      = 0;
-    EARTHSDAY     = 1;
-    WATERSDAY     = 2;
-    WINDSDAY      = 3;
-    ICEDAY        = 4;
-    LIGHTNINGDAY  = 5;
-    LIGHTSDAY     = 6;
-    DARKSDAY      = 7;
+FIRESDAY      = 0;
+EARTHSDAY     = 1;
+WATERSDAY     = 2;
+WINDSDAY      = 3;
+ICEDAY        = 4;
+LIGHTNINGDAY  = 5;
+LIGHTSDAY     = 6;
+DARKSDAY      = 7;
 
-    ELE_NONE      = 0;
-    ELE_FIRE      = 1;
-    ELE_EARTH     = 2;
-    ELE_WATER     = 3;
-    ELE_WIND      = 4;
-    ELE_ICE       = 5;
-    ELE_LIGHTNING = 6;
-    -- added both because monsterstpmoves calls it thunder
-    ELE_THUNDER   = 6;
-    ELE_LIGHT     = 7;
-    ELE_DARK      = 8;
+ELE_NONE      = 0;
+ELE_FIRE      = 1;
+ELE_EARTH     = 2;
+ELE_WATER     = 3;
+ELE_WIND      = 4;
+ELE_ICE       = 5;
+ELE_LIGHTNING = 6;
+-- added both because monsterstpmoves calls it thunder
+ELE_THUNDER   = 6;
+ELE_LIGHT     = 7;
+ELE_DARK      = 8;
 
-    dayStrong = {FIRESDAY, EARTHSDAY, WATERSDAY, WINDSDAY, ICEDAY, LIGHTNINGDAY, LIGHTSDAY, DARKSDAY};
-    dayWeak = {WATERSDAY, WINDSDAY, LIGHTNINGDAY, ICEDAY, FIRESDAY, EARTHSDAY, DARKSDAY, LIGHTSDAY};
-    singleWeatherStrong = {WEATHER_HOT_SPELL, WEATHER_DUST_STORM, WEATHER_RAIN, WEATHER_WIND, WEATHER_SNOW, WEATHER_THUNDER, WEATHER_AURORAS, WEATHER_GLOOM};
-    doubleWeatherStrong = {WEATHER_HEAT_WAVE, WEATHER_SAND_STORM, WEATHER_SQUALL, WEATHER_GALES, WEATHER_BLIZZARDS, WEATHER_THUNDERSTORMS, WEATHER_STELLAR_GLARE, WEATHER_DARKNESS};
-    singleWeatherWeak = {WEATHER_RAIN, WEATHER_WIND, WEATHER_THUNDER, WEATHER_SNOW, WEATHER_HOT_SPELL, WEATHER_DUST_STORM, WEATHER_GLOOM, WEATHER_AURORAS};
-    doubleWeatherWeak = {WEATHER_SQUALL, WEATHER_GALES, WEATHER_THUNDERSTORMS, WEATHER_BLIZZARDS, WEATHER_HEAT_WAVE, WEATHER_SAND_STORM, WEATHER_DARKNESS, WEATHER_STELLAR_GLARE};
-    elementalObi = {MOD_FORCE_FIRE_DWBONUS, MOD_FORCE_EARTH_DWBONUS, MOD_FORCE_WATER_DWBONUS, MOD_FORCE_WIND_DWBONUS, MOD_FORCE_ICE_DWBONUS, MOD_FORCE_LIGHTNING_DWBONUS, MOD_FORCE_LIGHT_DWBONUS, MOD_FORCE_DARK_DWBONUS};
-    elementalObiWeak = {MOD_FORCE_WATER_DWBONUS, MOD_FORCE_WIND_DWBONUS, MOD_FORCE_LIGHTNING_DWBONUS, MOD_FORCE_ICE_DWBONUS, MOD_FORCE_FIRE_DWBONUS, MOD_FORCE_EARTH_DWBONUS, MOD_FORCE_DARK_DWBONUS, MOD_FORCE_LIGHT_DWBONUS};
-    spellAcc = {MOD_FIREACC, MOD_EARTHACC, MOD_WATERACC, MOD_WINDACC, MOD_ICEACC, MOD_THUNDERACC, MOD_LIGHTACC, MOD_DARKACC};
-    strongAffinityDmg = {MOD_FIRE_AFFINITY_DMG, MOD_EARTH_AFFINITY_DMG, MOD_WATER_AFFINITY_DMG, MOD_WIND_AFFINITY_DMG, MOD_ICE_AFFINITY_DMG, MOD_THUNDER_AFFINITY_DMG, MOD_LIGHT_AFFINITY_DMG, MOD_DARK_AFFINITY_DMG};
-    strongAffinityAcc = {MOD_FIRE_AFFINITY_ACC, MOD_EARTH_AFFINITY_ACC, MOD_WATER_AFFINITY_ACC, MOD_WIND_AFFINITY_ACC, MOD_ICE_AFFINITY_ACC, MOD_THUNDER_AFFINITY_ACC, MOD_LIGHT_AFFINITY_ACC, MOD_DARK_AFFINITY_ACC};
-    resistMod = {MOD_FIRERES, MOD_EARTHRES, MOD_WATERRES, MOD_WINDRES, MOD_ICERES, MOD_THUNDERRES, MOD_LIGHTRES, MOD_DARKRES};
-    defenseMod = {MOD_FIREDEF, MOD_EARTHDEF, MOD_WATERDEF, MOD_WINDDEF, MOD_ICEDEF, MOD_THUNDERDEF, MOD_LIGHTDEF, MOD_DARKDEF};
-    absorbMod = {MOD_FIRE_ABSORB, MOD_EARTH_ABSORB, MOD_WATER_ABSORB, MOD_WIND_ABSORB, MOD_ICE_ABSORB, MOD_LTNG_ABSORB, MOD_LIGHT_ABSORB, MOD_DARK_ABSORB};
-    nullMod = {MOD_FIRE_NULL, MOD_EARTH_NULL, MOD_WATER_NULL, MOD_WIND_NULL, MOD_ICE_NULL, MOD_LTNG_NULL, MOD_LIGHT_NULL, MOD_DARK_NULL};
-    blmMerit = {MERIT_FIRE_MAGIC_POTENCY, MERIT_EARTH_MAGIC_POTENCY, MERIT_WATER_MAGIC_POTENCY, MERIT_WIND_MAGIC_POTENCY, MERIT_ICE_MAGIC_POTENCY, MERIT_LIGHTNING_MAGIC_POTENCY};
-    rdmMerit = {MERIT_FIRE_MAGIC_ACCURACY, MERIT_EARTH_MAGIC_ACCURACY, MERIT_WATER_MAGIC_ACCURACY, MERIT_WIND_MAGIC_ACCURACY, MERIT_ICE_MAGIC_ACCURACY, MERIT_LIGHTNING_MAGIC_ACCURACY};
-    blmAMIIMerit = {MERIT_FLARE_II, MERIT_QUAKE_II, MERIT_FLOOD_II, MERIT_TORNADO_II, MERIT_FREEZE_II, MERIT_BURST_II};
-    barSpells = {EFFECT_BARFIRE, EFFECT_BARSTONE, EFFECT_BARWATER, EFFECT_BARAERO, EFFECT_BARBLIZZARD, EFFECT_BARTHUNDER};
+dayStrong = {FIRESDAY, EARTHSDAY, WATERSDAY, WINDSDAY, ICEDAY, LIGHTNINGDAY, LIGHTSDAY, DARKSDAY};
+dayWeak = {WATERSDAY, WINDSDAY, LIGHTNINGDAY, ICEDAY, FIRESDAY, EARTHSDAY, DARKSDAY, LIGHTSDAY};
+singleWeatherStrong = {WEATHER_HOT_SPELL, WEATHER_DUST_STORM, WEATHER_RAIN, WEATHER_WIND, WEATHER_SNOW, WEATHER_THUNDER, WEATHER_AURORAS, WEATHER_GLOOM};
+doubleWeatherStrong = {WEATHER_HEAT_WAVE, WEATHER_SAND_STORM, WEATHER_SQUALL, WEATHER_GALES, WEATHER_BLIZZARDS, WEATHER_THUNDERSTORMS, WEATHER_STELLAR_GLARE, WEATHER_DARKNESS};
+singleWeatherWeak = {WEATHER_RAIN, WEATHER_WIND, WEATHER_THUNDER, WEATHER_SNOW, WEATHER_HOT_SPELL, WEATHER_DUST_STORM, WEATHER_GLOOM, WEATHER_AURORAS};
+doubleWeatherWeak = {WEATHER_SQUALL, WEATHER_GALES, WEATHER_THUNDERSTORMS, WEATHER_BLIZZARDS, WEATHER_HEAT_WAVE, WEATHER_SAND_STORM, WEATHER_DARKNESS, WEATHER_STELLAR_GLARE};
+elementalObi = {MOD_FORCE_FIRE_DWBONUS, MOD_FORCE_EARTH_DWBONUS, MOD_FORCE_WATER_DWBONUS, MOD_FORCE_WIND_DWBONUS, MOD_FORCE_ICE_DWBONUS, MOD_FORCE_LIGHTNING_DWBONUS, MOD_FORCE_LIGHT_DWBONUS, MOD_FORCE_DARK_DWBONUS};
+elementalObiWeak = {MOD_FORCE_WATER_DWBONUS, MOD_FORCE_WIND_DWBONUS, MOD_FORCE_LIGHTNING_DWBONUS, MOD_FORCE_ICE_DWBONUS, MOD_FORCE_FIRE_DWBONUS, MOD_FORCE_EARTH_DWBONUS, MOD_FORCE_DARK_DWBONUS, MOD_FORCE_LIGHT_DWBONUS};
+spellAcc = {MOD_FIREACC, MOD_EARTHACC, MOD_WATERACC, MOD_WINDACC, MOD_ICEACC, MOD_THUNDERACC, MOD_LIGHTACC, MOD_DARKACC};
+strongAffinityDmg = {MOD_FIRE_AFFINITY_DMG, MOD_EARTH_AFFINITY_DMG, MOD_WATER_AFFINITY_DMG, MOD_WIND_AFFINITY_DMG, MOD_ICE_AFFINITY_DMG, MOD_THUNDER_AFFINITY_DMG, MOD_LIGHT_AFFINITY_DMG, MOD_DARK_AFFINITY_DMG};
+strongAffinityAcc = {MOD_FIRE_AFFINITY_ACC, MOD_EARTH_AFFINITY_ACC, MOD_WATER_AFFINITY_ACC, MOD_WIND_AFFINITY_ACC, MOD_ICE_AFFINITY_ACC, MOD_THUNDER_AFFINITY_ACC, MOD_LIGHT_AFFINITY_ACC, MOD_DARK_AFFINITY_ACC};
+resistMod = {MOD_FIRERES, MOD_EARTHRES, MOD_WATERRES, MOD_WINDRES, MOD_ICERES, MOD_THUNDERRES, MOD_LIGHTRES, MOD_DARKRES};
+defenseMod = {MOD_FIREDEF, MOD_EARTHDEF, MOD_WATERDEF, MOD_WINDDEF, MOD_ICEDEF, MOD_THUNDERDEF, MOD_LIGHTDEF, MOD_DARKDEF};
+absorbMod = {MOD_FIRE_ABSORB, MOD_EARTH_ABSORB, MOD_WATER_ABSORB, MOD_WIND_ABSORB, MOD_ICE_ABSORB, MOD_LTNG_ABSORB, MOD_LIGHT_ABSORB, MOD_DARK_ABSORB};
+nullMod = {MOD_FIRE_NULL, MOD_EARTH_NULL, MOD_WATER_NULL, MOD_WIND_NULL, MOD_ICE_NULL, MOD_LTNG_NULL, MOD_LIGHT_NULL, MOD_DARK_NULL};
+blmMerit = {MERIT_FIRE_MAGIC_POTENCY, MERIT_EARTH_MAGIC_POTENCY, MERIT_WATER_MAGIC_POTENCY, MERIT_WIND_MAGIC_POTENCY, MERIT_ICE_MAGIC_POTENCY, MERIT_LIGHTNING_MAGIC_POTENCY};
+rdmMerit = {MERIT_FIRE_MAGIC_ACCURACY, MERIT_EARTH_MAGIC_ACCURACY, MERIT_WATER_MAGIC_ACCURACY, MERIT_WIND_MAGIC_ACCURACY, MERIT_ICE_MAGIC_ACCURACY, MERIT_LIGHTNING_MAGIC_ACCURACY};
+blmAMIIMerit = {MERIT_FLARE_II, MERIT_QUAKE_II, MERIT_FLOOD_II, MERIT_TORNADO_II, MERIT_FREEZE_II, MERIT_BURST_II};
+barSpells = {EFFECT_BARFIRE, EFFECT_BARSTONE, EFFECT_BARWATER, EFFECT_BARAERO, EFFECT_BARBLIZZARD, EFFECT_BARTHUNDER};
 
 -- USED FOR DAMAGING MAGICAL SPELLS (Stages 1 and 2 in Calculating Magic Damage on wiki)
 --Calculates magic damage using the standard magic damage calc.
@@ -128,11 +128,11 @@ function doBoostGain(caster,target,spell,effect)
     local effectOverwrite = {80, 81, 82, 83, 84, 85, 86};
 
     for i, effect in ipairs(effectOverwrite) do
-            --printf("BOOST-GAIN: CHECKING FOR EFFECT %d...",effect);
-            if (caster:hasStatusEffect(effect)) then
-                --printf("BOOST-GAIN: HAS EFFECT %d, DELETING...",effect);
-                caster:delStatusEffect(effect);
-            end
+        --printf("BOOST-GAIN: CHECKING FOR EFFECT %d...",effect);
+        if (caster:hasStatusEffect(effect)) then
+            --printf("BOOST-GAIN: HAS EFFECT %d, DELETING...",effect);
+            caster:delStatusEffect(effect);
+        end
     end
 
     if (target:addStatusEffect(effect,potency,0,duration)) then
@@ -169,12 +169,12 @@ function doEnspell(caster,target,spell,effect)
 end;
 
 
- ---------------------------------
- --   getCurePower returns the caster's cure power
- --   getCureFinal returns the final cure amount
- --   Source: http://members.shaw.ca/pizza_steve/cure/Cure_Calculator.html
- ---------------------------------
- function getCurePower(caster,isBlueMagic)
+---------------------------------
+--   getCurePower returns the caster's cure power
+--   getCureFinal returns the final cure amount
+--   Source: http://members.shaw.ca/pizza_steve/cure/Cure_Calculator.html
+---------------------------------
+function getCurePower(caster,isBlueMagic)
     local MND = caster:getStat(MOD_MND);
     local VIT = caster:getStat(MOD_VIT);
     local skill = caster:getSkillLevel(HEALING_MAGIC_SKILL) + caster:getMod(MOD_HEALING);
@@ -367,7 +367,7 @@ end;
 
 function getMagicHitRate(caster, target, skillType, element, percentBonus, bonusAcc)
     -- resist everything if magic shield is active
-    if (target:hasStatusEffect(EFFECT_MAGIC_SHIELD, 0)) then
+    if (target:getMod(MOD_MAGIC_SHIELD) <= 3) then
         return 0;
     end
 
@@ -377,9 +377,9 @@ function getMagicHitRate(caster, target, skillType, element, percentBonus, bonus
         bonusAcc = 0;
     end
 
+    -- Get the base acc (just skill + skill mod (79 + skillID = ModID) + magic acc mod)
     local magicacc = caster:getMod(MOD_MACC) + caster:getILvlMacc();
 
-    -- Get the base acc (just skill + skill mod (79 + skillID = ModID) + magic acc mod)
     if (skillType ~= 0) then
         magicacc = magicacc + caster:getSkillLevel(skillType) + caster:getMod(79 + skillType);
     else
@@ -402,10 +402,6 @@ function getMagicHitRate(caster, target, skillType, element, percentBonus, bonus
     local magiceva = target:getMod(MOD_MEVA) + resMod;
 
     magicacc = magicacc + bonusAcc;
-
-    -- Add macc% from food
-    local maccFood = magicacc * (caster:getMod(MOD_FOOD_MACCP)/100);
-    magicacc = magicacc + utils.clamp(maccFood, 0, caster:getMod(MOD_FOOD_MACC_CAP));
 
     return calculateMagicHitRate(magicacc, magiceva, percentBonus, caster:getMainLvl(), target:getMainLvl());
 end
@@ -514,11 +510,11 @@ function getSpellBonusAcc(caster, target, spell)
     local spellGroup = spell:getSpellGroup();
 
     if caster:hasStatusEffect(EFFECT_ALTRUISM) and spellGroup == SPELLGROUP_WHITE then
-      magicAccBonus = magicAccBonus + caster:getStatusEffect(EFFECT_ALTRUISM):getPower();
+        magicAccBonus = magicAccBonus + caster:getStatusEffect(EFFECT_ALTRUISM):getPower();
     end
 
     if caster:hasStatusEffect(EFFECT_FOCALIZATION) and spellGroup == SPELLGROUP_BLACK then
-      magicAccBonus = magicAccBonus + caster:getStatusEffect(EFFECT_FOCALIZATION):getPower();
+        magicAccBonus = magicAccBonus + caster:getStatusEffect(EFFECT_FOCALIZATION):getPower();
     end
 
     local skillchainTier, skillchainCount = FormMagicBurst(element, target);
@@ -583,7 +579,7 @@ function handleAfflatusMisery(caster, spell, dmg)
     return dmg;
 end;
 
- function finalMagicAdjustments(caster,target,spell,dmg)
+function finalMagicAdjustments(caster,target,spell,dmg)
     --Handles target's HP adjustment and returns UNSIGNED dmg (absorb message is set in this function)
 
     -- handle multiple targets
@@ -606,8 +602,8 @@ end;
         -- dmg = utils.takeShadows(target, dmg, 1);
 
         -- if (dmg == 0) then
-            -- spell:setMsg(31);
-            -- return 1;
+        -- spell:setMsg(31);
+        -- return 1;
         -- end
     end
 
@@ -629,6 +625,17 @@ end;
         dmg = utils.clamp(dmg, 0, 99999);
     end
 
+    --handling magic shield
+    dmg = utils.magicShield(target, dmg);
+    dmg = utils.clamp(dmg, -99999, 99999);
+
+    if (dmg < 0) then
+        dmg = target:addHP(-dmg);
+    else
+        target:delHP(dmg);
+        target:updateEnmityFromDamage(caster,dmg);
+    end
+
     --handling stoneskin
     dmg = utils.stoneskin(target, dmg);
     dmg = utils.clamp(dmg, -99999, 99999);
@@ -646,8 +653,9 @@ end;
         end
     end
 
+
     return dmg;
- end;
+end;
 
 function finalMagicNonSpellAdjustments(caster,target,ele,dmg)
     --Handles target's HP adjustment and returns SIGNED dmg (negative values on absorb)
@@ -659,9 +667,8 @@ function finalMagicNonSpellAdjustments(caster,target,ele,dmg)
         dmg = utils.clamp(dmg, 0, 99999);
     end
 
-    --handling stoneskin
-    dmg = utils.stoneskin(target, dmg);
-
+    --handling magic shield
+    dmg = utils.magicShield(target, dmg);
     dmg = utils.clamp(dmg, -99999, 99999);
 
     if (dmg < 0) then
@@ -669,6 +676,18 @@ function finalMagicNonSpellAdjustments(caster,target,ele,dmg)
     else
         target:delHP(dmg);
     end
+
+    --handling stoneskin
+    dmg = utils.stoneskin(target, dmg);
+    dmg = utils.clamp(dmg, -99999, 99999);
+
+    if (dmg < 0) then
+        dmg = -(target:addHP(-dmg));
+    else
+        target:delHP(dmg);
+    end
+
+
     --Not updating enmity from damage, as this is primarily used for additional effects (which don't generate emnity)
     -- in the case that updating enmity is needed, do it manually after calling this
     --target:updateEnmityFromDamage(caster,dmg);
@@ -704,7 +723,7 @@ function calculateMagicBurst(caster, spell, target)
         elseif (skillchainCount == 2) then
             burst = 1.35;
         elseif (skillchainCount == 3) then
-             burst = 1.40;
+            burst = 1.40;
         elseif (skillchainCount == 4) then
             burst = 1.45;
         elseif (skillchainCount == 5) then
@@ -810,7 +829,7 @@ function addBonuses(caster, spell, target, dmg, bonusmab)
 
         local mab_crit = caster:getMod(MOD_MAGIC_CRITHITRATE);
         if( math.random(1,100) < mab_crit ) then
-           mab = mab + ( 10 + caster:getMod(MOD_MAGIC_CRIT_DMG_INCREASE ) );
+            mab = mab + ( 10 + caster:getMod(MOD_MAGIC_CRIT_DMG_INCREASE ) );
         end
 
         local mdefBarBonus = 0;

@@ -320,9 +320,72 @@ function CharCreate(player)
     -- ADD ADVENTURER COUPON
     player:addItem(0x218);
 
+    -- ADD USEFUL STUFF
+    player:addItem(0x3D93); --Emperor Band 15763
+    player:addItem(0x2E23); --Destrier Beret 11811
+
     --SET TITLE
     player:addTitle(NEW_ADVENTURER);
 
+    -- ADD ALL MAPS
+    player:addKeyItem(MAP_OF_THE_JEUNO_AREA);
+    player:addKeyItem(MAP_OF_ORDELLES_CAVES);
+    player:addKeyItem(MAP_OF_GHELSBA);
+    player:addKeyItem(MAP_OF_DAVOI);
+    player:addKeyItem(MAP_OF_CARPENTERS_LANDING);
+    player:addKeyItem(MAP_OF_THE_ZERUHN_MINES);
+    player:addKeyItem(MAP_OF_THE_ELDIEME_NECROPOLIS);
+    player:addKeyItem(MAP_OF_QUFIM_ISLAND);
+    player:addKeyItem(MAP_OF_BIBIKI_BAY);
+    player:addKeyItem(MAP_OF_THE_LITELOR_REGION);
+    player:addKeyItem(MAP_OF_THE_MAZE_OF_SHAKHRAMI);
+    player:addKeyItem(MAP_OF_CASTLE_OZTROJA);
+    player:addKeyItem(MAP_OF_GIDDEUS);
+    player:addKeyItem(MAP_OF_BEADEAUX);
+    player:addKeyItem(MAP_OF_THE_PALBOROUGH_MINES);
+    player:addKeyItem(MAP_OF_THE_GARLAIGE_CITADEL);
+    player:addKeyItem(MAP_OF_THE_ELSHIMO_REGIONS);
+    player:addKeyItem(MAP_OF_THE_NORTHLANDS_AREA);
+    player:addKeyItem(MAP_OF_KING_RANPERRES_TOMB);
+    player:addKeyItem(MAP_OF_THE_DANGRUF_WADI);
+    player:addKeyItem(MAP_OF_THE_HORUTOTO_RUINS);
+    player:addKeyItem(MAP_OF_BOSTAUNIEUX_OUBLIETTE);
+    player:addKeyItem(MAP_OF_THE_TORAIMARAI_CANAL);
+    player:addKeyItem(MAP_OF_THE_GUSGEN_MINES);
+    player:addKeyItem(MAP_OF_THE_CRAWLERS_NEST);
+    player:addKeyItem(MAP_OF_THE_RANGUEMONT_PASS);
+    player:addKeyItem(MAP_OF_DELKFUTTS_TOWER);
+    player:addKeyItem(MAP_OF_FEIYIN);
+    player:addKeyItem(MAP_OF_CASTLE_ZVAHL);
+    player:addKeyItem(MAP_OF_THE_KUZOTZ_REGION);
+    player:addKeyItem(MAP_OF_THE_RUAUN_GARDENS);
+    player:addKeyItem(MAP_OF_NORG);
+    player:addKeyItem(MAP_OF_THE_TEMPLE_OF_UGGALEPIH);
+    player:addKeyItem(MAP_OF_THE_DEN_OF_RANCOR);
+    player:addKeyItem(MAP_OF_THE_KORROLOKA_TUNNEL);
+    player:addKeyItem(MAP_OF_THE_KUFTAL_TUNNEL);
+    player:addKeyItem(MAP_OF_THE_BOYAHDA_TREE);
+    player:addKeyItem(MAP_OF_THE_VELUGANNON_PALACE);
+    player:addKeyItem(MAP_OF_IFRITS_CAULDRON);
+    player:addKeyItem(MAP_OF_THE_QUICKSAND_CAVES);
+    player:addKeyItem(MAP_OF_THE_SEA_SERPENT_GROTTO);
+    player:addKeyItem(MAP_OF_THE_VOLLBOW_REGION);
+    player:addKeyItem(MAP_OF_THE_LABYRINTH_OF_ONZOZO);
+    player:addKeyItem(MAP_OF_THE_ULEGUERAND_RANGE);
+    player:addKeyItem(MAP_OF_THE_ATTOHWA_CHASM);
+    player:addKeyItem(MAP_OF_PSOXJA);
+    player:addKeyItem(MAP_OF_WAJAOM_WOODLANDS);
+    player:addKeyItem(MAP_OF_CAEDARVA_MIRE);
+    player:addKeyItem(MAP_OF_MOUNT_ZHAYOLM);
+    player:addKeyItem(MAP_OF_AYDEEWA_SUBTERRANE);
+    player:addKeyItem(MAP_OF_MAMOOK);
+    player:addKeyItem(MAP_OF_HALVUNG);
+    player:addKeyItem(MAP_OF_ARRAPAGO_REEF);
+    player:addKeyItem(MAP_OF_ALZADAAL_RUINS);
+    player:addKeyItem(MAP_OF_BHAFLAU_THICKETS);
+    player:addKeyItem(MAP_OF_VUNKERL_INLET);
+    player:addKeyItem(MAP_OF_GRAUBERG);
+    player:addKeyItem(MAP_OF_FORT_KARUGONARUGO);
     -- Needs Moghouse Intro
     player:setVar("MoghouseExplication",1);
     
