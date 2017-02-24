@@ -8,7 +8,7 @@
 -----------------------------------
 
 function onMobSpawn(mob)
-    if (math.random(1,100) <= 5) then -- Hardcoded "this or this item" drop rate until implemented.
+    if (math.random(1,100) <= 7) then -- Hardcoded "this or this item" drop rate until implemented.
         SetDropRate(2238,14986,1000); -- Ochimusha Kote
         SetDropRate(2238,16703,0);
     else
@@ -31,8 +31,8 @@ end;
 function onMobDespawn(mob)
 
     -- Set Mee_Deggi_the_Punisher's Window Open Time
-    local wait = math.random(3600,10800);
-    SetServerVariable("[POP]Mee_Deggi_the_Punisher", os.time(t) + wait); -- 1-3 hours
+    local wait = math.random(1200,3600);
+    SetServerVariable("[POP]Mee_Deggi_the_Punisher", os.time(t) + wait); -- 20-60 minutes
     DeterMob(mob:getID(), true);
 
     -- Set PH back to normal, then set to respawn spawn
