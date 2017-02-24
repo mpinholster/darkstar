@@ -175,7 +175,7 @@ local zone_list =
     { 0x14, 0x04, 152 }, -- Altar Room
     { 0x14, 0x44, 153 }, -- The Boyahda Tree
     { 0x14, 0x37, 154 }, -- Dragon's Aery
-    { 0x14, 0x0C, 157 }, -- Middle Delkfutt's Tower
+    { 0x14, 0x0C, 157 }, -- Middle Delkfutt's Tower (20,12)
     { 0x14, 0x0B, 158 }, -- Upper Delkfutt's Tower
     { 0x14, 0x36, 159 }, -- Temple of Uggalepih
     { 0x14, 0x35, 160 }, -- Den of Rancor
