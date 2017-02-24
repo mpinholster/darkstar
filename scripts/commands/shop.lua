@@ -97,6 +97,7 @@ function onTrigger(player,page)
         local stock_6 =
         {
             929,1000,    --Black Ink
+            895,5000,    --Ram Horn
         };
         showShop(player, STATIC, stock_6);
 
