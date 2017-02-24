@@ -8,6 +8,7 @@
 
 require("scripts/globals/settings");
 require("scripts/globals/status");
+require("scripts/globals/classes-adjust");
 
 -----------------------------------
 -- onAbilityCheck
@@ -69,7 +70,7 @@ function onUseAbility(player, target, ability)
 
     --printf("damge %d, ratio: %f, pdif: %d\n", damage, ratio, pdif);
 
-    damage = damage * (pdif / 1000);
+    damage = damage * PLDPowAdj * (pdif / 1000);
 
     target:delHP(damage);
     target:updateEnmityFromDamage(player,damage);

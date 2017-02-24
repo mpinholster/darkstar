@@ -23,4 +23,6 @@ end;
 
 function onUseAbility(player, target, ability)
     player:addStatusEffect(EFFECT_MANAFONT,1,0,60);
+    player:addMod(MOD_MATT,15);
+    player:addMod(MOD_MACC,15);
 end;

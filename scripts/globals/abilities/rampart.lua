@@ -8,6 +8,7 @@
 
 require("scripts/globals/settings");
 require("scripts/globals/status");
+require("scripts/globals/classes-adjust");
 
 -----------------------------------
 -- onAbilityCheck
@@ -23,5 +24,9 @@ end;
 
 function onUseAbility(player,target,ability)
     local duration = 30 + player:getMod(MOD_RAMPART_DURATION);
-    target:addStatusEffect(EFFECT_MAGIC_SHIELD, 1, 0, duration);
+    local vit = player:getStat(MOD_VIT);
+    local subpower = vit*2;
+
+    target:addStatusEffect(EFFECT_MAGIC_SHIELD, 4, 0, duration, subpower);
+
 end;

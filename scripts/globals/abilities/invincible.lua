@@ -8,6 +8,7 @@
 
 require("scripts/globals/settings");
 require("scripts/globals/status");
+require("scripts/globals/classes-adjust");
 
 -----------------------------------
 -- onAbilityCheck
@@ -22,5 +23,5 @@ end;
 -----------------------------------
 
 function onUseAbility(player,target,ability)
-    player:addStatusEffect(EFFECT_INVINCIBLE,1,0,30);
+    player:addStatusEffect(EFFECT_INVINCIBLE,1,0,30*PLDPowAdj);
 end;

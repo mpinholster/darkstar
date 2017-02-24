@@ -21,12 +21,12 @@ end;
 function onUseAbility(player,target,ability)
     -- To Do: Benediction can remove Charm only while in Assault Mission Lamia No.13
     local removables = {EFFECT_FLASH, EFFECT_BLINDNESS, EFFECT_MAX_HP_DOWN, EFFECT_MAX_MP_DOWN, EFFECT_PARALYSIS, EFFECT_POISON,
-                        EFFECT_CURSE_I, EFFECT_CURSE_II, EFFECT_DISEASE, EFFECT_PLAGUE, EFFECT_WEIGHT, EFFECT_BIND, 
-                        EFFECT_BIO, EFFECT_DIA, EFFECT_BURN, EFFECT_FROST, EFFECT_CHOKE, EFFECT_RASP, EFFECT_SHOCK, EFFECT_DROWN, 
-                        EFFECT_STR_DOWN, EFFECT_DEX_DOWN, EFFECT_VIT_DOWN, EFFECT_AGI_DOWN, EFFECT_INT_DOWN, EFFECT_MND_DOWN,
-                        EFFECT_CHR_DOWN, EFFECT_ADDLE, EFFECT_SLOW, EFFECT_HELIX, EFFECT_ACCURACY_DOWN, EFFECT_ATTACK_DOWN,
-                        EFFECT_EVASION_DOWN, EFFECT_DEFENSE_DOWN, EFFECT_MAGIC_ACC_DOWN, EFFECT_MAGIC_ATK_DOWN, EFFECT_MAGIC_EVASION_DOWN,
-                        EFFECT_MAGIC_DEF_DOWN, EFFECT_MAX_TP_DOWN, EFFECT_SILENCE};
+        EFFECT_CURSE_I, EFFECT_CURSE_II, EFFECT_DISEASE, EFFECT_PLAGUE, EFFECT_WEIGHT, EFFECT_BIND,
+        EFFECT_BIO, EFFECT_DIA, EFFECT_BURN, EFFECT_FROST, EFFECT_CHOKE, EFFECT_RASP, EFFECT_SHOCK, EFFECT_DROWN,
+        EFFECT_STR_DOWN, EFFECT_DEX_DOWN, EFFECT_VIT_DOWN, EFFECT_AGI_DOWN, EFFECT_INT_DOWN, EFFECT_MND_DOWN,
+        EFFECT_CHR_DOWN, EFFECT_ADDLE, EFFECT_SLOW, EFFECT_HELIX, EFFECT_ACCURACY_DOWN, EFFECT_ATTACK_DOWN,
+        EFFECT_EVASION_DOWN, EFFECT_DEFENSE_DOWN, EFFECT_MAGIC_ACC_DOWN, EFFECT_MAGIC_ATK_DOWN, EFFECT_MAGIC_EVASION_DOWN,
+        EFFECT_MAGIC_DEF_DOWN, EFFECT_MAX_TP_DOWN, EFFECT_SILENCE};
 
     for i, effect in ipairs(removables) do
         if (target:hasStatusEffect(effect)) then
@@ -42,8 +42,13 @@ function onUseAbility(player,target,ability)
         heal = maxHeal;
     end
 
-    player:updateEnmityFromCure(target,heal);
+    local enmity = heal * 0.4;
+
+    player:updateEnmityFromCure(target,enmity);
+    player:addTP(3000);
     target:addHP(heal);
+    target:addMP(heal);
+    target:addTP(250);
     target:wakeUp();
 
     return heal;
