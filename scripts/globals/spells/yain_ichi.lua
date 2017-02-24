@@ -6,6 +6,7 @@
 require("scripts/globals/settings");
 require("scripts/globals/status");
 require("scripts/globals/magic");
+require("scripts/globals/classes-adjust");
 
 -----------------------------------------
 -- OnSpellCast
@@ -19,6 +20,6 @@ function onSpellCast(caster,target,spell)
     caster:delStatusEffect(EFFECT_ENMITY_BOOST);
     
     local effect = EFFECT_PAX;
-    caster:addStatusEffect(effect,15,0,300);
+    caster:addStatusEffect(effect,15 * NINPowAdj,0,300);
     return effect;
 end;

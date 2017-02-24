@@ -3,6 +3,7 @@
 -----------------------------------------
 require("scripts/globals/status");
 require("scripts/globals/magic");
+require("scripts/globals/classes-adjust");
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------
@@ -12,7 +13,7 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
-    local duration = 90;
+    local duration = 90 * BLMPowAdj;
         if (caster:hasStatusEffect(EFFECT_SABOTEUR)) then
         duration = duration * 2;
     end

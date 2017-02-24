@@ -31,6 +31,6 @@ function onSpellCast(caster,target,spell)
     if merit > 0 then
         power = merit + caster:getMod(MOD_STORMSURGE_EFFECT) + 2;
     end
-    target:addStatusEffect(EFFECT_WINDSTORM,power,0,180);
+    target:addStatusEffect(EFFECT_WINDSTORM,power,0,180*SCHPowAdj);
     return EFFECT_WINDSTORM;
 end;

@@ -14,7 +14,7 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
-    local power = 9;
+    local power = 11; -- magic damage reduce by X % (wiki 9.4)
     local duration = 1800;
 
     duration = calculateDurationForLvl(duration, 18, target:getMainLvl());

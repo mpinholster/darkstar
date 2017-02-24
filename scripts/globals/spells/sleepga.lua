@@ -3,6 +3,7 @@
 -----------------------------------------
 require("scripts/globals/status");
 require("scripts/globals/magic");
+require("scripts/globals/classes-adjust");
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------
@@ -34,7 +35,7 @@ function onSpellCast(caster,target,spell)
         return EFFECT_SLEEP_I;
     end
 
-    duration = duration * resm;
+    duration = duration * resm * BLMPowAdj;
 
     if (target:addStatusEffect(EFFECT_SLEEP_I,1,0,duration)) then
         spell:setMsg(236);

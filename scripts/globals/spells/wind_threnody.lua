@@ -3,6 +3,7 @@
 -----------------------------------------
 require("scripts/globals/status");
 require("scripts/globals/magic");
+require("scripts/globals/classes-adjust");
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------
@@ -12,5 +13,5 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
-    return handleThrenody(caster, target, spell, 50, 60, MOD_WINDRES);
+    return handleThrenody(caster, target, spell, 50, 60*BRDPowAdj, MOD_WINDRES);
 end;

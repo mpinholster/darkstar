@@ -104,7 +104,7 @@ function onSpellCast(caster,target,spell)
     else
         if (target:isUndead()) then -- e.g. PCs healing skeles for damage (?)
             spell:setMsg(2);
-            local dmg = calculateMagicDamage(minCure,1,caster,spell,target,HEALING_MAGIC_SKILL,MOD_MND,false)*0.5;
+            local dmg = calculateMagicDamage(minCure,1,caster,spell,target,HEALING_MAGIC_SKILL,MOD_MND,false)*2;
             local resist = applyResistance(caster,spell,target,caster:getStat(MOD_MND)-target:getStat(MOD_MND),HEALING_MAGIC_SKILL,1.0);
             dmg = dmg*resist;
             dmg = addBonuses(caster,spell,target,dmg);
@@ -112,7 +112,7 @@ function onSpellCast(caster,target,spell)
             dmg = finalMagicAdjustments(caster,target,spell,dmg);
             final = dmg;
             target:delHP(final);
-            target:updateEnmityFromDamage(caster,final);
+            target:updateEnmityFromDamage(caster,final * 0.5);
         elseif (caster:getObjType() == TYPE_PC) then
             spell:setMsg(75);
         else

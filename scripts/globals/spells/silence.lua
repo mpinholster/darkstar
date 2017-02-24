@@ -3,6 +3,7 @@
 -----------------------------------------
 require("scripts/globals/status");
 require("scripts/globals/magic");
+require("scripts/globals/classes-adjust");
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------
@@ -23,7 +24,7 @@ function onSpellCast(caster,target,spell)
     local dMND = (caster:getStat(MOD_MND) - target:getStat(MOD_MND));
 
     --Duration, including resistance.  May need more research.
-    local duration = 180;
+    local duration = 180 * WHMPowAdj;
     
         if (caster:hasStatusEffect(EFFECT_SABOTEUR)) then
         duration = duration * 2;

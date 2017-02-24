@@ -4,6 +4,7 @@
 
 require("scripts/globals/status");
 require("scripts/globals/magic");
+require("scripts/globals/classes-adjust");
 
 -----------------------------------------
 -- OnSpellCast
@@ -24,7 +25,7 @@ function onSpellCast(caster,target,spell)
 
     --Calculates Resist Chance
     if (resist >= 0.125) then
-        local duration = 180 * resist;
+        local duration = 180 * NINPowAdj * resist;
         
         if (duration >= 50) then
             -- Erases a weaker inhibit tp and applies the stronger one
