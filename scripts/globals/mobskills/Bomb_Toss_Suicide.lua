@@ -1,7 +1,11 @@
+---------------------------------------------------
+-- Bomb Toss - Suicide
+-- Throws a bomb at an enemy. Sometimes backfires.
+---------------------------------------------
+require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
 require("scripts/globals/status");
-require("scripts/globals/monstertpmoves");
----------------------------------------------------
+---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
     -- notorious monsters shouldn't explode, nor dynamis
@@ -19,11 +23,11 @@ function onMobWeaponSkill(target, mob, skill)
         local BOMB_TOSS_HPP = skill:getHPP() / 100;
 
         local job = mob:getMainJob();
-    local power = math.random(12,18);
+    local power = math.random(6,12); -- normal 12-18
 
     -- thfs drop bombs like crazy
     if (job == JOBS.THF) then
-        power = power + 4;
+        power = power + 1; -- normal 4
     end
 
     local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*power*BOMB_TOSS_HPP,ELE_FIRE,dmgmod,TP_MAB_BONUS,1);

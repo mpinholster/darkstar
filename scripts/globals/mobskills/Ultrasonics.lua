@@ -1,4 +1,4 @@
----------------------------------------------------
+--------------------------------------------------
 -- Ultrasonics
 -- Reduces evasion of targets in area of effect.
 ---------------------------------------------------
@@ -16,7 +16,7 @@ end;
 function onMobWeaponSkill(target, mob, skill)
     local typeEffect = EFFECT_EVASION_DOWN;
 
-    skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, 25, 0, 180));
+    skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, 25, 0, 120));
 
 
         return typeEffect;
