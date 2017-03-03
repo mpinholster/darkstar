@@ -9,7 +9,7 @@
 -----------------------------------
 
 function onMobSpawn(mob)
-    if (math.random(1,100) <= 7) then -- Hardcoded "this or this item" drop rate until implemented.
+    if (math.random(1,100) <= 25) then -- Hardcoded "this or this item" drop rate until implemented.
         SetDropRate(2916,15737,1000); -- Sarutobi Kyahan
         SetDropRate(2916,16820,0);
     else
@@ -32,8 +32,8 @@ end;
 function onMobDespawn(mob)
 
     -- Set Quu_Domi_the_Gallant's Window Open Time
-    local wait = math.random(3600,10800);
-    SetServerVariable("[POP]Quu_Domi_the_Gallant", os.time(t) + wait); -- 1-3 hours
+    local wait = math.random(1200,3600);
+    SetServerVariable("[POP]Quu_Domi_the_Gallant", os.time(t) + wait); -- 20-60 minutes
     DeterMob(mob:getID(), true);
 
     -- Set PH back to normal, then set to respawn spawn
